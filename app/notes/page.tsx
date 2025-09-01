@@ -1,6 +1,7 @@
+import { CreateNoteButton } from '@/components/CreateNote'
 import Navbar from '@/components/Navbar'
 import { Button } from '@/components/ui/button'
-import { Bot, Plus } from 'lucide-react'
+import { Bot } from 'lucide-react'
 import React from 'react'
 
 const Notes = () => {
@@ -11,7 +12,7 @@ const Notes = () => {
       <h1 className='text-2xl font-bold'>My Notes</h1>
       <div className='flex items-center gap-4'>
         <Button className='flex items-center gap-2' variant={'outline'}><Bot /> Ask AI</Button>
-        <Button className='flex items-center gap-2'><Plus/>Create Note</Button>
+        <CreateNoteButton/>
       </div>
 
       </section>
