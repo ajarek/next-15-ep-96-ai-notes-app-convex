@@ -20,7 +20,7 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useAction } from "convex/react";
+import { useMutation } from "convex/react";
 import { Plus } from "lucide-react";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -57,8 +57,7 @@ interface CreateNoteDialogProps {
 }
 
 function CreateNoteDialog({ open, onOpenChange }: CreateNoteDialogProps) {
-  // Update the path below to match the actual export in your api object, e.g., api.createNote or api.note.createNote
-    const createNote = useAction(api.notesActions.createNote);
+  const createNote = useMutation(api.notes.createNote);
 
 
   const form = useForm<z.infer<typeof noteFormSchema>>({

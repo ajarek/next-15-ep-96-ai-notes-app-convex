@@ -1,5 +1,6 @@
 import { CreateNoteButton } from '@/components/CreateNote'
 import Navbar from '@/components/Navbar'
+import { NotesPage } from '@/components/NotePage'
 import { Button } from '@/components/ui/button'
 import { Bot } from 'lucide-react'
 import React from 'react'
@@ -14,8 +15,9 @@ const Notes = () => {
         <Button className='flex items-center gap-2' variant={'outline'}><Bot /> Ask AI</Button>
         <CreateNoteButton/>
       </div>
-
+     
       </section>
+      <NotesPage />
     </div>
   )
 }
